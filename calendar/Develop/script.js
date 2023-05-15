@@ -1,7 +1,47 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+const currentTime = dayjs().format('HH:mm:ss');
+let currentDay = $('#currentDay');
+let nine = $('#hour-9');
+let ten = $('#hour-10');
+let eleven = $('#hour-11');
+let twelve = $('#hour-12');
+let one = $('#hour-1');
+let two = $('#hour-2');
+let three = $('#hour-3');
+let four = $('#hour-4');
+let five = $('#hour-5');
+
+// Function to update the clock display
+function updateClock() {
+  currentDay.text(currentTime);
+};
+updateClock();
+setInterval(updateClock, 1000);
+
+$(document).ready(function() {
+  var targetTime = new Date();
+
+  // Compare the current time with the target time
+  if (dayjs().isBefore(targetTime.setHours(9), 'hour')) {
+    nine.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(9), 'hour')) {
+    nine.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(9), 'hour')) {
+    nine.removeClass('present future').addClass('past');
+  }
+
+  if (dayjs().isBefore(targetTime.setHours(10), 'hour')) {
+    ten.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(10), 'hour')) {
+    ten.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(10), 'hour')) {
+    ten.removeClass('present future').addClass('past');
+  }
+})
+
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -20,4 +60,3 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
