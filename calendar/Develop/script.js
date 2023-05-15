@@ -39,6 +39,55 @@ $(document).ready(function() {
   } else if (dayjs().isAfter(targetTime.setHours(10), 'hour')) {
     ten.removeClass('present future').addClass('past');
   }
+  if (dayjs().isBefore(targetTime.setHours(11), 'hour')) {
+    eleven.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(11), 'hour')) {
+    eleven.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(11), 'hour')) {
+    eleven.removeClass('present future').addClass('past');
+  }
+  if (dayjs().isBefore(targetTime.setHours(12), 'hour')) {
+    twelve.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(12), 'hour')) {
+    twelve.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(12), 'hour')) {
+    twelve.removeClass('present future').addClass('past');
+  }
+  if (dayjs().isBefore(targetTime.setHours(13), 'hour')) {
+    one.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(13), 'hour')) {
+    one.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(13), 'hour')) {
+    one.removeClass('present future').addClass('past');
+  }
+  if (dayjs().isBefore(targetTime.setHours(14), 'hour')) {
+    two.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(14), 'hour')) {
+    two.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(14), 'hour')) {
+    two.removeClass('present future').addClass('past');
+  }
+  if (dayjs().isBefore(targetTime.setHours(15), 'hour')) {
+    three.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(15), 'hour')) {
+    three.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(15), 'hour')) {
+    three.removeClass('present future').addClass('past');
+  }
+  if (dayjs().isBefore(targetTime.setHours(16), 'hour')) {
+    four.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(16), 'hour')) {
+    four.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(16), 'hour')) {
+    four.removeClass('present future').addClass('past');
+  }
+  if (dayjs().isBefore(targetTime.setHours(17), 'hour')) {
+    five.removeClass('past present').addClass('future');
+  } else if (dayjs().isSame(targetTime.setHours(17), 'hour')) {
+    five.removeClass('past future').addClass('present');
+  } else if (dayjs().isAfter(targetTime.setHours(17), 'hour')) {
+    five.removeClass('present future').addClass('past');
+  }
 })
 
 
