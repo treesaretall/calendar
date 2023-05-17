@@ -1,4 +1,3 @@
-const currentTime = dayjs().format('HH:mm:ss');
 const currentDay = $('#currentDay');
 const nine = $('#hour-9');
 const ten = $('#hour-10');
@@ -12,9 +11,12 @@ const five = $('#hour-17');
 
 // Function to update the clock display
 function updateClock() {
-  currentDay.text(currentTime);
+  const currentDate = dayjs().format('YYYY-MMM-DD');
+  const currentTime = dayjs().format('HH:mm:ss');
+  currentDay.text(currentDate + ' ' + currentTime);
 };
 updateClock();
+setInterval(updateClock,1000);
 
 
 // Compare the current time with the target time and assign colors
@@ -67,10 +69,3 @@ for (let i = 9; i <= 17; i++) {
     textarea.text(savedCont);
   })();
 }
-
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
