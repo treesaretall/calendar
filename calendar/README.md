@@ -1,99 +1,40 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Simple Calendar Application
+The Simple Calendar Application is a user-friendly calendar that helps users track their daily schedule. The application updates the color of each hour block dynamically as time passes, providing a visual representation of the current time. Additionally, it allows users to save their text inputs for each hour, which are stored in the local storage and retrieved when the application is reopened.
 
-## Your Task
+![Photo of webpage](./Assets/Screenshot%202023-05-17%20at%204.45.32%20PM.jpg)
+URL: https://treesaretall.github.io/calendar/
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Features
+- Hourly Color Update: The application automatically updates the color of each hour block based on the current time. Past hours are displayed in grey, the present hour is red, and future hours are green. This feature enables users to easily identify the current time and visually organize their day.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+- Text Input and Saving: Users can enter and save text input for each hour. The application provides a text area for users to enter their schedule, reminders, or any other information. The entered text is saved to the local storage, ensuring that the data is preserved even if the application is closed or refreshed. When the application is reopened, the saved text inputs are retrieved and displayed in the respective hour blocks, allowing users to review and update their plans.
 
-## User Story
+- User-Friendly Interface: The Calendar Application offers a clean and intuitive interface, making it easy for users to navigate and interact with the calendar. The hour blocks are clearly labeled, and the color-coded scheme provides a visual cue for the current time and the status of each hour.
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+## Technologies Used
+- HTML: The application's structure and layout are created using HTML.
+- CSS: CSS is utilized to style the user interface, including the hour blocks, colors, and overall aesthetics.
+- JavaScript: The dynamic functionality, such as color updates and text input saving, is implemented using JavaScript. The application leverages the local storage API for data persistence.
+- Date and Time Libraries: Day.js is used to handle time-related operations, including comparing the current time with the hour blocks and formatting time displays.
 
-## Acceptance Criteria
+## Usage
+- Open the Hourly Calendar Application in a web browser.
+- The calendar will be displayed, showing the hourly blocks for the day.
+- Each hour block will have a text area where you can enter your schedule or reminders for that specific hour.
+- As time passes, the color of the hour blocks will be automatically updated to indicate past, present, and future hours.
+- Enter your text inputs in the respective hour blocks and click the save button to the right. The application will save the text to the local storage.
+- If you close or refresh the application, your saved text inputs will be retrieved and displayed when you reopen the application.
+- You can update or modify your text inputs at any time by editing the respective hour block.
+- Enjoy using the Hourly Calendar Application to stay organized and manage your daily schedule efficiently!
+Note: Make sure your browser has local storage enabled for the application to save and retrieve data successfully.
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+## Future Enhancements
+Here are some potential enhancements that could be implemented in future versions of the Hourly Calendar Application:
 
-The following animation demonstrates the application functionality:
+- User Authentication: Introduce user authentication to allow multiple users to have their own personalized calendars and securely store their data.
+- Reminder Notifications: Add a notification feature to remind users of upcoming events or tasks based on the scheduled time.
+- Customizable Themes: Provide different themes or customization options to allow users to personalize the appearance of the calendar according to their preferences.
+- Sharing and Collaboration: Enable users to share their calendars with others and collaborate on scheduling or planning activities together.
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## License
+This project is licensed under the MIT License.
