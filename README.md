@@ -1,7 +1,7 @@
 # Simple Calendar Application
 The Simple Calendar Application is a user-friendly calendar that helps users track their daily schedule. The application updates the color of each hour block dynamically as time passes, providing a visual representation of the current time. Additionally, it allows users to save their text inputs for each hour, which are stored in the local storage and retrieved when the application is reopened.
 
-![Photo of webpage](./Assets/Screenshot%202023-05-17%20at%204.45.32%20PM.jpg)
+![Photo of webpage](./assets/Screenshot%202023-05-17%20at%204.45.32%20PM.jpg)
 URL: https://treesaretall.github.io/calendar/
 
 ## Features
